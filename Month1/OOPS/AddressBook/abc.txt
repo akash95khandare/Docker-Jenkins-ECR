@@ -1,1 +1,0 @@
-[{'first_name': 'SAGAR', 'last_name': 'BHUJBALE', 'data': {'address': 'MUMBAI', 'city': 'PUNE', 'state': 'MAHARASHTRA', 'zip_code': '444709', 'phone_number': '7709642813'}}]
