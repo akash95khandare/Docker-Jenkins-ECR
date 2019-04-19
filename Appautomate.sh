@@ -1,5 +1,4 @@
 #!/bin/bash
-pip3 install gunicorn
 echo '
 [Unit]
 Description=gunicorn daemon
@@ -11,9 +10,9 @@ WorkingDirectory=/home/ubuntu/chatapplication/
 ExecStart=/home/ubuntu/venv/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/chatapplication/chatapplication.sock chatapplication.wsgi:application
 [Install]
 WantedBy=multi-user.target' > /etc/systemd/system/gunicorn.service
-sudo systemctl daemon-reload
-sudo systemctl start gunicorn
-sudo systemctl enable gunicorn
+systemctl daemon-reload
+systemctl start gunicorn
+systemctl enable gunicorn
 echo '
 server {
  listen 80;
@@ -24,7 +23,7 @@ server {
      proxy_pass http://unix:/home/ubuntu/chatapplication/chatapplication.sock;
  }
 } ' > /etc/nginx/sites-available/chatapplication
-ln -s /etc/nginx/sites-available/chatapplication /etc/nginx/sites-enabled
+sudo ln -s /etc/nginx/sites-available/chatapplication /etc/nginx/sites-enabled
 nginx -t
 sudo rm /etc/nginx/sites-enabled/default
 service nginx restart
