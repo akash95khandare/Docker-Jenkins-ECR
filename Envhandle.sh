@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/ubuntu/chatapplication/;source /home/ubuntu/venv/bin/activate;pip3 install gunicorn;pip3 install -r req.txt;pip3 install django;pip3 install channels;pip3 install django-environ;
+cd /home/ubuntu/chatapplication/;source /home/ubuntu/venv/bin/activate;pip3 install -r req.txt;pip3 install django;pip3 install channels;pip3 install django-environ;pip3 install gunicorn;
 echo 'DEBUG=TRUE
 # DJANGO_SETTINGS_MODULE=myapp.settings.dev
 SECRET_KEY=xux7u0pd8r#k)fbf6+s4!8uksw(e!-y!je($v_j7m1r+g@z32-
