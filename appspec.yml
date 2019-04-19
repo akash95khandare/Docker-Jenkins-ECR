@@ -1,16 +1,16 @@
 version: 0.0
 os: ubuntu
 files:
-  - source: /*
+  - source: /chatapplication
     destination: /home/ubuntu/
 hooks:
   BeforeInstall:
     - location: install_dependancies
-	  timeout: 300
-	  runas: root
-	- location: env
-	  timeout: 300
-	  runas: root
-	- location: automate
-	  timeout: 300
-	  runas: root
+      timeout: 300
+      runas: root
+    - location: env
+      timeout: 300
+      runas: root
+    - location: automate
+      timeout: 300
+      runas: root
