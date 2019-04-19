@@ -1,0 +1,12 @@
+#!/bin/bash
+cd /home/ubuntu/
+sudo apt-get install -y python3-pip
+sudo apt-get install -y python3-venv
+python3 -m venv env
+source env/bin/activate
+cd Chat-Application-in-Django/chatapplication/
+sudo pip3 install -r req.txt
+pip3 install -y channels
+sudo apt-get install -y libmysql-dev
+pip3 install -y mysqlclient
+pip3 install django-environ 
