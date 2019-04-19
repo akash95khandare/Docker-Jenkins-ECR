@@ -7,7 +7,7 @@ After=network.target
 User=root
 Group=www-data
 WorkingDirectory=/home/ubuntu/chatapplication/
-ExecStart=/home/ubuntu/venv/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/chatapplication/chatapplication.sock chatapplication.wsgi:application
+ExecStart=/usr/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/chatapplication/chatapplication.sock chatapplication.wsgi:application
 [Install]
 WantedBy=multi-user.target' > /etc/systemd/system/gunicorn.service
 systemctl daemon-reload
