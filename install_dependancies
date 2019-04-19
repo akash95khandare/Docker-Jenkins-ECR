@@ -1,13 +1,5 @@
 #!/bin/bash
-cp -r chatapplication /home/ubuntu
-cd /home/ubuntu/
+sudo apt-get update -y
 sudo apt-get install -y python3-pip
-sudo apt-get install -y python3-venv
-python3 -m venv env
-source env/bin/activate
-cd /home/ubuntu/chatapplication/
-sudo pip3 install -r req.txt
-pip3 install -y channels
-sudo apt-get install -y libmysql-dev
-pip3 install -y mysqlclient
-pip3 install -y django-environ 
+sudo apt-get install -y libmysqlclient-dev
+sudo apt-get install -y nginx
