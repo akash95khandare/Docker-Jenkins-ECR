@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: chatapplication
-    destination: /home/ubuntu/
+    destination: /home/ubuntu/chatapplication/
   - source: venv
-    destination: /home/ubuntu/
+    destination: /home/ubuntu/venv/
 hooks:
   BeforeInstall:
     - location: Depend.sh
