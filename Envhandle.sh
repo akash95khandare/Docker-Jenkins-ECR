@@ -1,6 +1,7 @@
 #!/bin/bash
 cp chatapplication -r /home/ubuntu/
-source venv/bin/activate
+cp venv -r /home/ubuntu/
+source /home/ubuntu/venv/bin/activate
 cd /home/ubuntu/chatapplication/
 pip3 install -r req.txt
 pip3 install django
