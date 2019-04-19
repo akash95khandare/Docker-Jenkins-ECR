@@ -12,4 +12,3 @@ echo 'DEBUG=TRUE
 		SECRET_KEY=xux7u0pd8r#k)fbf6+s4!8uksw(e!-y!je($v_j7m1r+g@z32-
 		DATABASE_URL=mysql://chatapp:chatapp123@chatapp.cmhiaqrzjnrz.us-east-2.rds.amazonaws.com:3306/chatapp
 		' > /home/ubuntu/chatapplication/chatapplication/.env
-cd /home/ubuntu/chatapplication/chatapplication
