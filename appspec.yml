@@ -5,6 +5,8 @@ hooks:
     - location: Depend.sh
       timeout: 300
   AfterInstall:
+    - location: CopyProject.sh
+      timeout: 300
     - location: Envhandle.sh
       timeout: 400
     - location: Appautomate.sh
