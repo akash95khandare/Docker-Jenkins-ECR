@@ -18,6 +18,9 @@ server {
  listen 80;
  server_name _;
  location = /favicon.ico { access_log off; log_not_found off; }
+ location /static/ {
+     root /home/ubuntu/chatapplication/;
+ }
  location / {
      include proxy_params;
      proxy_pass http://unix:/home/ubuntu/chatapplication/chatapplication.sock;
