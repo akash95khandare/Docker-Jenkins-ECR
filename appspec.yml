@@ -4,7 +4,6 @@ hooks:
   BeforeInstall:
     - location: install_dependancies 
       timeout: 300
-      runas: root
   AfterInstall:
     - location: env
       timeout: 300
