@@ -5,9 +5,8 @@ hooks:
     - location: install_dependancies 
       timeout: 300
       runas: root
+  AfterInstall:
     - location: env
       timeout: 300
-      runas: root
     - location: automate
       timeout: 300
-      runas: root
