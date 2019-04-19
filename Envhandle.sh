@@ -1,5 +1,5 @@
 #!/bin/bash
-cp chatapplication /home/ubuntu/
+cp chatapplication -r /home/ubuntu/
 source venv/bin/activate
 cd /home/ubuntu/chatapplication/
 pip3 install -r req.txt
