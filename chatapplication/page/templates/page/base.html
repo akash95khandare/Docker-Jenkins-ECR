@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<style>
+    body {background-color: DarkGrey;}
+</style>
+<body>
+    <center><h1>Bridgelabz</h1></center>
+    <a href="{% url 'home' %}"><h3>HOME</h3></a>
+    <a href="{% url 'login' %}"><p align="right">LOGIN</p></a>
+    <a href="{% url 'signup' %}"><p align="right">SIGNUP</p></a>
+<!-- horizontal tag -->
+    <hr>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
+
+
+
+
+
