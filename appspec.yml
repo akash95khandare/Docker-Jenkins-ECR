@@ -6,6 +6,6 @@ hooks:
       timeout: 300
   AfterInstall:
     - location: Envhandle.sh
-      timeout: 300
+      timeout: 400
     - location: Appautomate.sh
       timeout: 300
