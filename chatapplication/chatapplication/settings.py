@@ -29,7 +29,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = 'xux7u0pd8r#k)fbf6+s4!8uksw(e!-y!je($v_j7m1r+g@z32-'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -94,11 +94,19 @@ CHANNEL_LAYERS = {
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+#DATABASES = {
+#    'default': env.db()
+#}
 DATABASES = {
-    'default': env.db()
-
+     'default': {
+         'ENGINE': 'django.db.backends.'+os.environ.get('DATABASE_TYPE'),
+         'NAME': os.environ.get('DATABASE_NAME'),
+         'USER': os.environ.get('USER_NAME'),
+         'PASSWORD': os.environ.get('PASSWORD'),
+         'HOST': os.environ.get('HOST_NAME'),
+         'PORT': os.environ.get('PORT'),
+     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
