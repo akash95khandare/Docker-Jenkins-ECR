@@ -10,6 +10,12 @@ RUN pip3 install django && pip3 install virtualenv && pip3 install django-enviro
 COPY ./chatapplication /chatapplication
 WORKDIR /chatapplication
 RUN pip3 install -r req.txt  
+ENV DATABASE_TYPE=mysql
+ENV DATABASE_NAME=chatapp2
+ENV USER_NAME=chatapp
+ENV PASSWORD=chatapp123
+ENV HOST_NAME=chatapp-1.cmhiaqrzjnrz.us-east-2.rds.amazonaws.com
+ENV PORT=3306
 CMD python3 manage.py migrate
 
 EXPOSE 8000
