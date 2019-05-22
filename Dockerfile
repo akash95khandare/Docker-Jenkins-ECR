@@ -16,8 +16,6 @@ ENV USER_NAME=chatapp
 ENV PASSWORD=chatapp123
 ENV HOST_NAME=chatapp-1.cmhiaqrzjnrz.us-east-2.rds.amazonaws.com
 ENV PORT=3306
-CMD python3 manage.py migrate
-
 EXPOSE 8000
-
+CMD python3 manage.py migrate
 CMD gunicorn --bind 0.0.0.0:8000 chatapplication.wsgi:application
